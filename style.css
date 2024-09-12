@@ -1,0 +1,398 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
+    line-height: 1.6;
+}
+
+
+header {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    background: #edaf05; /* Dark blue background */
+    padding: 1em 0;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #edaf05; /* Dark blue background */
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5em 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.fixed-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.fixed-nav a:hover {
+    background: #002244; /* Slightly darker blue on hover */
+    border-radius: 5px;
+}
+
+.profile-section {
+    position: relative;
+    background-image: url('strom.gif'); /* Use the cover photo as the background */
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Set height for the profile section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    position: absolute;
+    top: 50%; /* Align the profile picture vertically in the middle */
+    left: 50%; /* Align the profile picture horizontally in the middle */
+    transform: translate(-50%, -50%); /* Offset by 50% to center it exactly */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff; /* White border around the profile picture */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text Styling for Profile Section */
+.profile-section h1, 
+.profile-section p, 
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-shadow: -1px -1px 0 #003366, 1px -1px 0 #003366, -1px 1px 0 #003366, 1px 1px 0 #003366; /* Dark blue text border effect */
+}
+
+.profile-section h1 {
+    font-size: 2.5em;
+    margin-top: 300px; /* Adjust based on your layout */
+}
+
+.profile-section p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+main {
+    padding: 2em;
+    width: 100%;
+    background: #ffffff; /* White background for main content */
+}
+
+section {
+    width: 100%;
+    padding: 2em 1em;
+    border-bottom: 1px solid #ddd; /* Border between sections */
+}
+
+h2 {
+    color: #003366; /* Dark blue for section headings */
+    border-bottom: 2px solid #003366; /* Underline for section headings */
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* Experience Section Styling */
+.experience-item {
+    display: flex;
+    justify-content: space-between; /* Space between content and dates */
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #ddd; /* Optional border for separation */
+    padding-bottom: 1em; /* Padding for spacing */
+}
+
+.experience-content {
+    flex: 1; /* Content takes up remaining space */
+}
+
+.experience-dates {
+    flex-shrink: 0;
+    font-size: 1em;  /* Same size as workshop dates */
+    color: #003366;  /* Dark blue color for dates */
+    text-align: right;
+}
+.experience-dates p {
+    margin: 0; /* Remove margin for consistency */
+    text-align: right; /* Align text to the right for neatness */
+}
+
+/* Optional: Ensures the headings and dates align well in vertical space */
+.experience-item h3, .experience-item .experience-dates p {
+    margin-bottom: 0.5em; /* Space between heading and date */
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between; /* Space between content and dates */
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #ddd; /* Optional border for separation */
+    padding-bottom: 1em; /* Padding for spacing */
+}
+
+.education-content {
+    flex: 1; /* Content takes up remaining space */
+}
+
+.education-dates {
+    flex: 0 0 auto; /* Auto width based on content */
+    display: flex;
+    align-items: flex-start; /* Aligns the dates with the start of the content */
+    justify-content: flex-end; /* Aligns the dates to the right */
+    min-width: 150px; /* Minimum width to keep dates aligned in a single line */
+}
+
+.education-dates p {
+    margin: 0; /* Remove margin for consistency */
+    text-align: right; /* Align text to the right for neatness */
+}
+
+/* Optional: Ensures the headings and dates align well in vertical space */
+.education-item h3, .education-item .education-dates p {
+    margin-bottom: 0.5em; /* Space between heading and date */
+}
+
+/* Skills Section */
+#skills {
+    margin-bottom: 2em;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.skills-column {
+    flex: 1;
+    min-width: 300px; /* Adjust based on your preference */
+    margin: 0 1em;
+}
+
+.skills-category {
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px;
+    padding: 1em;
+    background-color: #ffffff; /* White background for each category */
+    margin-bottom: 1em;
+}
+
+.skills-category h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #003366; /* Dark blue underline */
+    padding-bottom: 0.3em;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-category ul li {
+    margin-bottom: 0.5em;
+}
+
+
+
+.publication-item {
+    margin-bottom: 1.5em;
+}
+
+.publication-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.publication-item a {
+    color: #003366; /* Dark blue for links */
+    text-decoration: none;
+}
+
+.publication-item a:hover {
+    text-decoration: underline;
+}
+
+.publication-item p {
+    margin: 0;
+}
+
+#workshops-conferences {
+    margin-bottom: 2em;
+}
+
+.workshop-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5em; /* Space between items */
+}
+
+.workshop-details {
+    flex-grow: 1;
+}
+
+.workshop-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.workshop-details .subheading {
+    font-size: 1em;
+    color: #666; /* Gray for location */
+}
+
+.workshop-details a {
+    color: #003366; /* Dark blue for links */
+    text-decoration: none;
+}
+
+.workshop-details a:hover {
+    text-decoration: underline;
+}
+
+.workshop-date {
+    flex-shrink: 0;
+    font-size: 1em;
+    color: #003366; /* Dark blue for dates */
+}
+
+/* Interests Section */
+#interests {
+    margin-bottom: 2em;
+}
+
+#interests h2 {
+    margin-bottom: 1em;
+}
+
+#interests p {
+    font-size: 1em;
+    color: #666; /* Gray for text */
+    line-height: 1.6; /* Consistent line height */
+}
+
+
+/* Button Styling */
+button {
+    background: #003366; /* Dark blue button */
+    border: none;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #002244; /* Slightly darker blue on hover */
+}
+
+/* Link Styling */
+a {
+    color: #003366; /* Dark blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+    margin-top: 1em;
+}
+
+form label {
+    display: block;
+    margin-top: 1em;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Footer Styling */
+footer {
+    background: #edaf05; /* Dark blue footer */
+    color: #ffffff; /* White text */
+    padding: 1em;
+    text-align: center;
+    border-top: 2px solid #ffffff; /* White top border */
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 1em;
+}
+
+.social-links a {
+    color: #ffffff; /* White icons */
+    font-size: 1.5em; /* Size of icons */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #cccccc; /* Light grey on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        height: auto;
+        padding: 2em 1em; /* Adjust padding for smaller screens */
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-section h1 {
+        margin-top: 0;
+        font-size: 1.8em;
+    }
+
+    .fixed-nav {
+        padding: 0.5em;
+    }
+
+    .fixed-nav a {
+        padding: 8px 12px;
+    }
+}
+
+
